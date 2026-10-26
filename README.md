@@ -31,7 +31,7 @@ Implemented a normalized Star Schema designed for optimal analytical performance
 - **Dimension Tables:** `Country_Profiles`, `Projects_Locations`, `Project type`
 - **Dedicated Measure Table:** ` Mesures` (isolating all DAX business calculations)
 
-![Data Model](./data_model.png)
+![Data Model](./data_model_en.png)
 
 ---
 
