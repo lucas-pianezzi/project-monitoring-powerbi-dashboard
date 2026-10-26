@@ -47,7 +47,7 @@ Key analytical logic implemented:
 
 ## 📁 Repository Structure
 
-- `Sanitoral-Project_Monitoring.pbix` : Full interactive Power BI report
+- `Sanitoral-Project_Monitoring_en.pbix` : Full interactive Power BI report
 - `dax_measures.md` : Documented DAX analytics script and formulas
 - `project_strategy_canvas.png` : Business requirements and user stories matrix
 - `data_model.png` : Star schema relational data model
