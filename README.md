@@ -1,7 +1,7 @@
 # Global Project Portfolio Monitoring & Variance Analytics (Power BI)
 
 ## 📌 Business Overview
-This project delivers an interactive executive BI dashboard for **Sanitoral**, an international organization managing concurrent IT and Marketing project portfolios across multiple countries. The objective is to centralize strategic performance tracking, automate data refresh workflows, and provide actionable drill-down capabilities across three leadership tiers (Executive, Regional, Country).
+This project delivers an interactive executive BI dashboard for Sanitoral, an international organization managing concurrent IT and Marketing project portfolios across multiple countries. The objective is to centralize strategic performance tracking, automate data refresh workflows, and provide actionable drill-down capabilities across three leadership tiers (Executive, Regional, Country).
 
 ---
 
