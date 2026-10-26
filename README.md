@@ -29,7 +29,7 @@ Implemented a normalized Star Schema designed for optimal analytical performance
 - **Central Fact Table (Plan):** `Projects_plans`
 - **Fact Tables (Actuals):** `Actual_Costs`, `Actual_Duration`, `Actual_Deliverable`
 - **Dimension Tables:** `Country_Profiles`, `Projects_Locations`, `Project type`
-- **Dedicated Measure Table:** ` Mesures` (isolating all DAX business calculations)
+- **Dedicated Measure Table:** ` _Measures` (isolating all DAX business calculations)
 
 ![Data Model](./data_model_en.png)
 
@@ -47,7 +47,7 @@ Key analytical logic implemented:
 
 ## 📁 Repository Structure
 
-- `Sanitoral-Project_Monitoring.pbix` : Full interactive Power BI report (embedded VertiPaq model and visuals)
+- `Sanitoral-Project_Monitoring.pbix` : Full interactive Power BI report
 - `dax_measures.md` : Documented DAX analytics script and formulas
 - `project_strategy_canvas.png` : Business requirements and user stories matrix
 - `data_model.png` : Star schema relational data model
