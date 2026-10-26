@@ -1,7 +1,6 @@
-// =====================================================================
 // SANITORAL PROJECT PORTFOLIO - CORE DAX MEASURES
+
 // Table: Measures
-// =====================================================================
 
 // --- 1. BASELINE & ACTUAL AGGREGATIONS ---
 
