@@ -1,55 +1,72 @@
-# Global Project Portfolio Monitoring & Variance Analytics (Power BI)
+**Français** | [English](README.en.md)
 
-## 📌 Business Overview
-This project delivers an interactive executive BI dashboard for Sanitoral, an international organization managing concurrent IT and Marketing project portfolios across multiple countries. The objective is to centralize strategic performance tracking, automate data refresh workflows, and provide actionable drill-down capabilities across three leadership tiers (Executive, Regional, Country).
+# Suivi d'un portefeuille de projets et analyse des écarts (Power BI)
 
----
+## En bref
 
-## 🎯 Framing & User Stories (Product Strategy Canvas)
-Developed using a structured framework tailored to three distinct management personas:
-- **CEO / General Management:** High-level portfolio health, total active vs. delayed projects, overall budget drift, and domain filtering (IT vs. Marketing).
-- **Regional Directors:** Geographic map distribution, regional delay bottlenecks, and localized project intervention triggers.
-- **Country Managers:** Granular phase-level tracking (Phases 1–4 for Marketing, Phases A–F for IT), core KPI variances, and interactive tooltips for project details.
+Tableau de bord Power BI interactif pour Sanitoral, une organisation internationale qui gère en parallèle des projets informatiques et marketing dans plusieurs pays. L'objectif : centraliser le suivi de la performance, automatiser l'actualisation des données et permettre d'explorer les résultats à trois niveaux de direction (général, régional, pays).
 
-![Product Strategy Canvas](./project_strategy_canvas.png)
+- **Outils :** Power BI, Power Query (M), DAX
+- **Livrables :** rapport Power BI, modèle de données en étoile, mesures DAX documentées
+
+> Le rapport et ses captures sont en anglais.
 
 ---
 
-## ⚙️ Automated ETL Architecture (Power Query)
-- **Zero-Manual Preprocessing:** Automated data cleansing and shaping pipeline executed entirely in Power Query M-code.
-- **Relational Composite Keys:** Built surrogate unique keys `[Phase - Project ID]` via column mergers to bridge project baseline plans and actual execution records without altering raw files.
-- **Scalable Refresh:** Automated transformation steps designed to handle recurring updates with zero loss of data integrity.
+## Cadrage et besoins utilisateurs
 
-![Power Query Steps](./etl_steps.png)
+Le tableau de bord a été cadré à partir des besoins de trois profils de décideurs :
+- **Direction générale :** santé globale du portefeuille, projets actifs et en retard, dérive budgétaire globale, filtre par domaine (informatique ou marketing).
+- **Directeurs régionaux :** répartition géographique sur carte, zones où les retards s'accumulent, déclencheurs d'intervention locale.
+- **Responsables pays :** suivi détaillé par phase (phases 1 à 4 pour le marketing, A à F pour l'informatique), écarts sur les indicateurs clés, infobulles interactives sur chaque projet.
 
----
-
-## 🗄️ Data Model & Architecture
-Implemented a normalized Star Schema designed for optimal analytical performance and clear filter propagation:
-- **Central Fact Table (Plan):** `Projects_plans`
-- **Fact Tables (Actuals):** `Actual_Costs`, `Actual_Duration`, `Actual_Deliverable`
-- **Dimension Tables:** `Country_Profiles`, `Projects_Locations`, `Project type`
-- **Dedicated Measure Table:** ` _Measures` (isolating all DAX business calculations)
-
-![Data Model](./data_model_en.png)
+![Cadrage du projet](./project_strategy_canvas.png)
 
 ---
 
-## 📈 DAX Analytics & Governance
-All analytical formulas and variance metrics are isolated and fully documented in [`dax_measures.md`](./dax_measures.md).
+## Préparation des données automatisée (Power Query)
 
-Key analytical logic implemented:
-- **Variance Tracking:** Planned vs. actual calculations across Cost, Duration, and Deliverables (in absolute values and percentages).
-- **Automated Risk Flags:** Dynamic conditional alerts flagging any project with $\ge 15\%$ drift on deadlines, budgets, or milestone deliveries.
-- **Custom Visuals & UX:** Custom **Gantt Chart** timeline visualization, natural language Q&A querying, and contextual hover tooltips.
+- **Aucun retraitement manuel :** nettoyage et mise en forme entièrement réalisés en langage M dans Power Query.
+- **Clés composites :** création d'une clé unique `[Phase - Project ID]` par fusion de colonnes, pour relier les plans de référence aux réalisations sans modifier les fichiers sources.
+- **Actualisation reproductible :** les étapes de transformation absorbent les mises à jour récurrentes sans perte d'intégrité.
+
+![Étapes Power Query](./etl_steps.png)
 
 ---
 
-## 📁 Repository Structure
+## Modèle de données
 
-- `Sanitoral-Project_Monitoring_en.pbix` : Full interactive Power BI report
-- `dax_measures.md` : Documented DAX analytics script and formulas
-- `project_strategy_canvas.png` : Business requirements and user stories matrix
-- `data_model.png` : Star schema relational data model
-- `etl_steps.png` : Automated Power Query ETL pipeline
-- `README.md` : Project documentation
+Modèle en étoile, conçu pour des calculs performants et une propagation claire des filtres :
+- **Table de faits centrale (prévisionnel) :** `Projects_plans`
+- **Tables de faits (réalisé) :** `Actual_Costs`, `Actual_Duration`, `Actual_Deliverable`
+- **Tables de dimensions :** `Country_Profiles`, `Projects_Locations`, `Project type`
+- **Table de mesures dédiée :** `_Measures`, qui regroupe tous les calculs DAX
+
+![Modèle de données](./data_model_en.png)
+
+---
+
+## Mesures DAX et pilotage
+
+Toutes les mesures sont regroupées et documentées dans [`dax_measures.md`](./dax_measures.md).
+
+- **Suivi des écarts :** prévu contre réalisé sur les coûts, les durées et les livrables, en valeur et en pourcentage.
+- **Alertes automatiques :** un projet est signalé dès qu'il dérive d'au moins 15 % sur son budget, ses délais ou ses livrables.
+- **Expérience utilisateur :** diagramme de Gantt personnalisé, questions en langage naturel (Q&A) et infobulles contextuelles.
+
+---
+
+## Contenu du dépôt
+
+| Fichier | Description |
+|---|---|
+| `Sanitoral-Project_Monitoring_en.pbix` | Rapport Power BI interactif complet |
+| `dax_measures.md` | Mesures DAX documentées |
+| `project_strategy_canvas.png` | Cadrage : besoins et récits utilisateurs |
+| `data_model_en.png` | Modèle de données en étoile |
+| `etl_steps.png` | Étapes de préparation dans Power Query |
+| `README.md` / `README.en.md` | Documentation en français / en anglais |
+
+---
+
+Projet réalisé dans le cadre de la formation Data Analyst d'OpenClassrooms.
