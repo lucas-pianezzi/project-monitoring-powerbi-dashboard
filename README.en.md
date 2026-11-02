@@ -72,7 +72,6 @@ All measures are grouped and documented in [`dax_measures.md`](./dax_measures.md
 |---|---|
 | `Sanitoral-Project_Monitoring_en.pbix` | Interactive Power BI report (English) |
 | `Sanitoral-Project_Monitoring_fr.pbix` | Interactive Power BI report (French) |
-| `theme/SanitoralPortfolio.json` | Power BI report theme (colours, typography, cards) |
 | `dashboard_*.png` | Dashboard screenshots (EN and FR) |
 | `dax_measures.md` | Documented DAX measures |
 | `project_strategy_canvas.png` | Business requirements and user stories |
