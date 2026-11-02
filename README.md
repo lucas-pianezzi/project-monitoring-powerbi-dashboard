@@ -7,9 +7,19 @@
 Tableau de bord Power BI interactif pour Sanitoral, une organisation internationale qui gère en parallèle des projets informatiques et marketing dans plusieurs pays. L'objectif : centraliser le suivi de la performance, automatiser l'actualisation des données et permettre d'explorer les résultats à trois niveaux de direction (général, régional, pays).
 
 - **Outils :** Power BI, Power Query (M), DAX
-- **Livrables :** rapport Power BI, modèle de données en étoile, mesures DAX documentées
+- **Livrables :** rapport Power BI en français et en anglais, modèle de données en étoile, mesures DAX documentées
 
-> Le rapport et ses captures sont en anglais.
+---
+
+## Aperçu du tableau de bord
+
+**Vue d'ensemble** : les cinq indicateurs clés, la dérive des délais par pays, le budget prévu vs réel par type de projet, et le détail de chaque projet (les projets en alerte sont surlignés).
+
+![Vue d'ensemble](./dashboard_overview_fr.png)
+
+**Planning** : le diagramme de Gantt des phases de chaque projet, avec un indicateur 🟢 dans les temps / 🔴 en retard.
+
+![Planning](./dashboard_timeline_fr.png)
 
 ---
 
@@ -60,7 +70,10 @@ Toutes les mesures sont regroupées et documentées dans [`dax_measures.md`](./d
 
 | Fichier | Description |
 |---|---|
-| `Sanitoral-Project_Monitoring_en.pbix` | Rapport Power BI interactif complet |
+| `Sanitoral-Project_Monitoring_fr.pbix` | Rapport Power BI interactif (français) |
+| `Sanitoral-Project_Monitoring_en.pbix` | Rapport Power BI interactif (anglais) |
+| `theme/SanitoralPortfolio.json` | Thème Power BI du rapport (couleurs, typographie, cartes) |
+| `dashboard_*.png` | Captures du tableau de bord (FR et EN) |
 | `dax_measures.md` | Mesures DAX documentées |
 | `project_strategy_canvas.png` | Cadrage : besoins et récits utilisateurs |
 | `data_model_en.png` | Modèle de données en étoile |

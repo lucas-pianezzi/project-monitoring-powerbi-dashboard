@@ -7,7 +7,19 @@
 An interactive Power BI dashboard for Sanitoral, an international organisation running IT and Marketing project portfolios in parallel across several countries. The goal: centralise performance tracking, automate data refresh, and let three levels of management (executive, regional, country) drill down into the results.
 
 - **Tools:** Power BI, Power Query (M), DAX
-- **Deliverables:** Power BI report, star schema data model, documented DAX measures
+- **Deliverables:** Power BI report in English and French, star schema data model, documented DAX measures
+
+---
+
+## Dashboard preview
+
+**Overview**: the five key indicators, schedule drift by country, planned vs actual budget by project type, and project-level detail (projects on alert are highlighted).
+
+![Overview](./dashboard_overview_en.png)
+
+**Timeline**: Gantt chart of each project's phases, with a 🟢 on schedule / 🔴 behind schedule flag.
+
+![Timeline](./dashboard_timeline_en.png)
 
 ---
 
@@ -58,7 +70,10 @@ All measures are grouped and documented in [`dax_measures.md`](./dax_measures.md
 
 | File | Description |
 |---|---|
-| `Sanitoral-Project_Monitoring_en.pbix` | Full interactive Power BI report |
+| `Sanitoral-Project_Monitoring_en.pbix` | Interactive Power BI report (English) |
+| `Sanitoral-Project_Monitoring_fr.pbix` | Interactive Power BI report (French) |
+| `theme/SanitoralPortfolio.json` | Power BI report theme (colours, typography, cards) |
+| `dashboard_*.png` | Dashboard screenshots (EN and FR) |
 | `dax_measures.md` | Documented DAX measures |
 | `project_strategy_canvas.png` | Business requirements and user stories |
 | `data_model_en.png` | Star schema data model |
